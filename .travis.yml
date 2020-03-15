@@ -13,7 +13,7 @@ before_install:
     - gcloud auth activate-service-account --key-file service-account.json
     - gcloud config set project mk8s-271101
     - gcloud config set compute/zone asia-northeast1-c
-    - gcloud container clusters get-credentials multi-cluter
+    - gcloud container clusters get-credentials multi-cluster
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
     - docker build -t yasubay/react-test -f ./client/Dockerfile.dev ./client
 
